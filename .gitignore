@@ -1,5 +1,6 @@
 # TMP
 tmp.py
+export/
 
 # PyCharm
 .DS_Store
@@ -21,4 +22,3 @@ venv/
 # Testing
 .coverage
 coverage
-export.zip
