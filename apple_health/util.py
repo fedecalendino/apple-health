@@ -4,11 +4,22 @@ from typing import Optional
 from dateutil import parser
 
 CONSTANTS = {
-    "HKCategoryValueAppleStandHourIdle": 0,
-    "HKCategoryValueAppleStandHourStood": 1,
-    "HKCategoryValueSleepAnalysisAwake": 0,
-    "HKCategoryValueSleepAnalysisInBed": 1,
-    "HKCategoryValueSleepAnalysisAsleep": 2,
+    "HKCategoryValueNotApplicable": 0,
+    "HKCategoryValueAppleStandHourStood": 0,
+    "HKCategoryValueAppleStandHourIdle": 1,
+    "HKCategoryValueAudioExposureEventLoudEnvironment": 1,
+    "HKCategoryValueCervicalMucusQualityDry": 1,
+    "HKCategoryValueCervicalMucusQualitySticky": 2,
+    "HKCategoryValueCervicalMucusQualityCreamy": 3,
+    "HKCategoryValueCervicalMucusQualityWatery": 4,
+    "HKCategoryValueCervicalMucusQualityEggWhite": 5,
+    "HKCategoryValueOvulationTestResultNegative": 1,
+    "HKCategoryValueOvulationTestResultLuteinizingHormoneSurge": 2,
+    "HKCategoryValueOvulationTestResultIndeterminate": 3,
+    "HKCategoryValueOvulationTestResultEstrogenSurge": 4,
+    "HKCategoryValueSleepAnalysisInBed": 0,
+    "HKCategoryValueSleepAnalysisAsleep": 1,
+    "HKCategoryValueSleepAnalysisAwake": 2,
 }
 
 
