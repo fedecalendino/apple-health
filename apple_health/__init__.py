@@ -1,1 +1,1 @@
-from apple_health.classes import HealthData
+from apple_health.health_data import HealthData
