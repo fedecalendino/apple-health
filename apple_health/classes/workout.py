@@ -1,9 +1,9 @@
-from apple_health.classes.base import HKRecord
+from apple_health.classes.base import Sample
 
 from apple_health.util import parse_float
 
 
-class Workout(HKRecord):
+class Workout(Sample):
     NAME_KEY = "@workoutActivityType"
     TYPES = {
         "HKWorkoutActivityTypeAmericanFootball": "American Football",

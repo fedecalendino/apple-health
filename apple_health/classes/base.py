@@ -3,7 +3,7 @@ from datetime import datetime
 from apple_health.util import parse_date
 
 
-class HKRecord:
+class Sample:
     NAME_KEY = "@type"
     TYPES = {}
 

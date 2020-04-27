@@ -43,7 +43,7 @@ class ActivitySummary:
 
     def __repr__(self) -> str:
         aep = int(100 * self.active_energy_percent)
-        et = int(100 * self.exercise_time_percent)
-        sh = int(100 * self.stand_hours_percent)
+        etp = int(100 * self.exercise_time_percent)
+        shp = int(100 * self.stand_hours_percent)
 
-        return f"{aep}% / {et}% / {sh}%"
+        return f"{aep}% / {etp}% / {shp}%"

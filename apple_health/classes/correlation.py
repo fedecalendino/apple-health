@@ -1,11 +1,11 @@
 from typing import List
 
-from apple_health.classes.base import HKRecord
+from apple_health.classes.base import Sample
 from apple_health.classes.record import Record
 from apple_health.util import parse_float
 
 
-class Correlation(HKRecord):
+class Correlation(Sample):
     TYPES = {
         "HKCorrelationTypeIdentifierBloodPressure": "Blood Pressure",
         "HKCorrelationTypeIdentifierFood": "Food",

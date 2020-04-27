@@ -1,9 +1,9 @@
-from apple_health.classes.base import HKRecord
+from apple_health.classes.base import Sample
 
 from apple_health.util import parse_float
 
 
-class Record(HKRecord):
+class Record(Sample):
     TYPES = {
         "HKCategoryTypeIdentifierAppleStandHour": "Stand Hour",
         "HKCategoryTypeIdentifierMindfulSession": "Mindful Session",
