@@ -37,4 +37,4 @@ class Workout(Sample):
         )
 
     def __repr__(self) -> str:
-        return f"{self.name}: {self.duration} {self.duration_unit}"
+        return f"{self.name}: {self.duration:0.2f} {self.duration_unit}"

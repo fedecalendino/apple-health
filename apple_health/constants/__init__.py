@@ -5,5 +5,6 @@ from .me import (
     WHEELCHAIR_USES,
 )
 from .correlation import CORRELATIONS
+from .metadata import METADATA
 from .record import RECORDS
 from .workout import WORKOUTS

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, time
 from typing import Optional
 
 from dateutil import parser
@@ -30,6 +30,13 @@ def parse_date(value: str) -> Optional[datetime]:
         return None
 
     return parser.parse(value)
+
+
+def parse_time(value: str) -> Optional[time]:
+    if value is None:
+        return None
+
+    return parser.parse(value).time()
 
 
 def parse_float(value: str, default: float = 0.0) -> float:
