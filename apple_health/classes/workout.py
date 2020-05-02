@@ -1,86 +1,40 @@
 from apple_health.classes.base import Sample
-
+from apple_health.constants import WORKOUTS
 from apple_health.util import parse_float
+
+WORKOUT_ACTIVITY_TYPE = "@workoutActivityType"
+DURATION = "@duration"
+DURATION_UNIT = "@durationUnit"
+TOTAL_DISTANCE = "@totalDistance"
+TOTAL_DISTANCE_UNIT = "@totalDistanceUnit"
+TOTAL_ENERGY_BURNED = "@totalEnergyBurned"
+TOTAL_ENERGY_BURNED_UNIT = "@totalEnergyBurnedUnit"
+TOTAL_FLIGHTS_CLIMBED = "@totalFlightsClimbed"
+TOTAL_SWIMMING_STROKE_COUNT = "@totalSwimmingStrokeCount"
 
 
 class Workout(Sample):
-    NAME_KEY = "@workoutActivityType"
-    TYPES = {
-        "HKWorkoutActivityTypeAmericanFootball": "American Football",
-        "HKWorkoutActivityTypeArchery": "Archery",
-        "HKWorkoutActivityTypeAustralianFootball": "Australian Football",
-        "HKWorkoutActivityTypeBadminton": "Badminton",
-        "HKWorkoutActivityTypeBaseball": "Baseball",
-        "HKWorkoutActivityTypeBasketball": "Basketball",
-        "HKWorkoutActivityTypeBowling": "Bowling",
-        "HKWorkoutActivityTypeBoxing": "Boxing",
-        "HKWorkoutActivityTypeClimbing": "Climbing",
-        "HKWorkoutActivityTypeCricket": "Cricket",
-        "HKWorkoutActivityTypeCrossTraining": "Cross Training",
-        "HKWorkoutActivityTypeCurling": "Curling",
-        "HKWorkoutActivityTypeCycling": "Cycling",
-        "HKWorkoutActivityTypeDance": "Dance",
-        "HKWorkoutActivityTypeDanceInspiredTraining": "Dance Inspired Training",
-        "HKWorkoutActivityTypeElliptical": "Elliptical",
-        "HKWorkoutActivityTypeEquestrianSports": "Equestrian Sports",
-        "HKWorkoutActivityTypeFencing": "Fencing",
-        "HKWorkoutActivityTypeFishing": "Fishing",
-        "HKWorkoutActivityTypeFunctionalStrengthTraining": "Functional Strength Training",
-        "HKWorkoutActivityTypeGolf": "Golf",
-        "HKWorkoutActivityTypeGymnastics": "Gymnastics",
-        "HKWorkoutActivityTypeHandball": "Handball",
-        "HKWorkoutActivityTypeHighIntensityIntervalTraining": "High Intensity Interval Training",
-        "HKWorkoutActivityTypeHiking": "Hiking",
-        "HKWorkoutActivityTypeHockey": "Hockey",
-        "HKWorkoutActivityTypeHunting": "Hunting",
-        "HKWorkoutActivityTypeLacrosse": "Lacrosse",
-        "HKWorkoutActivityTypeMartialArts": "Martial Arts",
-        "HKWorkoutActivityTypeMindAndBody": "Mind And Body",
-        "HKWorkoutActivityTypeMixedMetabolicCardioTraining": "Mixed Metabolic Cardio Training",
-        "HKWorkoutActivityTypeOther": "Other",
-        "HKWorkoutActivityTypePaddleSports": "Paddle Sports",
-        "HKWorkoutActivityTypePlay": "Play",
-        "HKWorkoutActivityTypePreparationAndRecovery": "Preparation And Recovery",
-        "HKWorkoutActivityTypeRacquetball": "Racquetball",
-        "HKWorkoutActivityTypeRowing": "Rowing",
-        "HKWorkoutActivityTypeRugby": "Rugby",
-        "HKWorkoutActivityTypeRunning": "Running",
-        "HKWorkoutActivityTypeSailing": "Sailing",
-        "HKWorkoutActivityTypeSkatingSports": "Skating Sports",
-        "HKWorkoutActivityTypeSnowSports": "Snow Sports",
-        "HKWorkoutActivityTypeSoccer": "Soccer",
-        "HKWorkoutActivityTypeSoftball": "Softball",
-        "HKWorkoutActivityTypeSquash": "Squash",
-        "HKWorkoutActivityTypeStairClimbing": "Stair Climbing",
-        "HKWorkoutActivityTypeSurfingSports": "Surfing Sports",
-        "HKWorkoutActivityTypeSwimming": "Swimming",
-        "HKWorkoutActivityTypeTableTennis": "Table Tennis",
-        "HKWorkoutActivityTypeTennis": "Tennis",
-        "HKWorkoutActivityTypeTrackAndField": "Track And Field",
-        "HKWorkoutActivityTypeTraditionalStrengthTraining": "Traditional Strength Training",
-        "HKWorkoutActivityTypeVolleyball": "Volleyball",
-        "HKWorkoutActivityTypeWalking": "Walking",
-        "HKWorkoutActivityTypeWaterFitness": "Water Fitness",
-        "HKWorkoutActivityTypeWaterPolo": "Water Polo",
-        "HKWorkoutActivityTypeWaterSports": "Water Sports",
-        "HKWorkoutActivityTypeWrestling": "Wrestling",
-        "HKWorkoutActivityTypeYoga": "Yoga",
-    }
+    NAME_KEY = WORKOUT_ACTIVITY_TYPE
+    TYPES = WORKOUTS
 
     def __init__(self, **data):
         super().__init__(**data)
 
-        self.duration: float = parse_float(data.get("@duration"))
-        self.duration_unit: str = data.get("@durationUnit")
+        self.duration: float = parse_float(data.get(DURATION))
+        self.duration_unit: str = data.get(DURATION_UNIT)
 
-        self.distance: float = parse_float(data.get("@totalDistance"))
-        self.distance_unit: str = data.get("@totalDistanceUnit")
+        self.distance: float = parse_float(data.get(TOTAL_DISTANCE))
+        self.distance_unit: str = data.get(TOTAL_DISTANCE_UNIT)
 
-        self.flights_climbed: float = parse_float(data.get("@totalFlightsClimbed"))
-        self.swimming_strokes: float = parse_float(data.get("@totalSwimmingStrokeCount"))
+        self.energy_burned: float = parse_float(data.get(TOTAL_ENERGY_BURNED))
+        self.energy_burned_unit: str = data.get(TOTAL_ENERGY_BURNED_UNIT)
 
-        self.energy_burned: float = parse_float(data.get("@totalEnergyBurned"))
-        self.energy_burned_unit: str = data.get("@totalEnergyBurnedUnit")
+        self.flights_climbed: float = parse_float(
+            data.get(TOTAL_FLIGHTS_CLIMBED)
+        )
+        self.swimming_strokes: float = parse_float(
+            data.get(TOTAL_SWIMMING_STROKE_COUNT)
+        )
 
     def __repr__(self) -> str:
-        return f"{self.alias}: {self.duration} {self.duration_unit}"
+        return f"{self.name}: {self.duration} {self.duration_unit}"

@@ -3,23 +3,25 @@ from typing import Optional
 
 from dateutil import parser
 
+from apple_health.constants import record
+
 CONSTANTS = {
-    "HKCategoryValueNotApplicable": 0,
-    "HKCategoryValueAppleStandHourStood": 0,
-    "HKCategoryValueAppleStandHourIdle": 1,
-    "HKCategoryValueAudioExposureEventLoudEnvironment": 1,
-    "HKCategoryValueCervicalMucusQualityDry": 1,
-    "HKCategoryValueCervicalMucusQualitySticky": 2,
-    "HKCategoryValueCervicalMucusQualityCreamy": 3,
-    "HKCategoryValueCervicalMucusQualityWatery": 4,
-    "HKCategoryValueCervicalMucusQualityEggWhite": 5,
-    "HKCategoryValueOvulationTestResultNegative": 1,
-    "HKCategoryValueOvulationTestResultLuteinizingHormoneSurge": 2,
-    "HKCategoryValueOvulationTestResultIndeterminate": 3,
-    "HKCategoryValueOvulationTestResultEstrogenSurge": 4,
-    "HKCategoryValueSleepAnalysisInBed": 0,
-    "HKCategoryValueSleepAnalysisAsleep": 1,
-    "HKCategoryValueSleepAnalysisAwake": 2,
+    record.HK_RECORD_NOT_APPLICABLE: 0,
+    record.HK_RECORD_APPLE_STAND_HOUR_STOOD: 0,
+    record.HK_RECORD_APPLE_STAND_HOUR_IDLE: 1,
+    record.HK_RECORD_AUDIO_EXPOSURE_EVENT_LOUD_ENVIRONMENT: 1,
+    record.HK_RECORD_CERVICAL_MUCUS_QUALITY_DRY: 1,
+    record.HK_RECORD_CERVICAL_MUCUS_QUALITY_STICKY: 2,
+    record.HK_RECORD_CERVICAL_MUCUS_QUALITY_CREAMY: 3,
+    record.HK_RECORD_CERVICAL_MUCUS_QUALITY_WATERY: 4,
+    record.HK_RECORD_CERVICAL_MUCUS_QUALITY_EGG_WHITE: 5,
+    record.HK_RECORD_OVULATION_TEST_RESULT_NEGATIVE: 1,
+    record.HK_RECORD_OVULATION_TEST_RESULT_LUTEINIZING_HORMONE_SURGE: 2,
+    record.HK_RECORD_OVULATION_TEST_RESULT_INDETERMINATE: 3,
+    record.HK_RECORD_OVULATION_TEST_RESULT_ESTROGEN_SURGE: 4,
+    record.HK_RECORD_SLEEP_ANALYSIS_IN_BED: 0,
+    record.HK_RECORD_SLEEP_ANALYSIS_ASLEEP: 1,
+    record.HK_RECORD_SLEEP_ANALYSIS_AWAKE: 2,
 }
 
 

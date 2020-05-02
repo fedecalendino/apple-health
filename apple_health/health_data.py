@@ -1,3 +1,5 @@
+import logging
+
 import xmltodict
 
 from apple_health.classes import (
@@ -8,11 +10,13 @@ from apple_health.classes import (
     Workout,
 )
 
+log = logging.getLogger(__name__)
+
 
 class HealthData:
 
     def __init__(self):
-        self.me = None
+        self.me = Me()
         self.activity_summaries = []
         self.correlations = []
         self.records = []
@@ -34,32 +38,32 @@ class HealthData:
         health_data = HealthData()
 
         if include_me:
-            print("Reading: Me...")
+            log.info("Reading: Me...")
             health_data.me = Me(**data["Me"])
 
         if include_activity_summaries:
-            print("Reading: ActivitySummary...")
+            log.info("Reading: ActivitySummary...")
             health_data.activity_summaries = list(map(
                 lambda a: ActivitySummary(**a),
                 data.get("ActivitySummary", [])
             ))
 
         if include_correlations:
-            print("Reading: Correlation...")
+            log.info("Reading: Correlation...")
             health_data.correlations = list(map(
                 lambda c: Correlation(**c),
                 data.get("Correlation", [])
             ))
 
         if include_records:
-            print("Reading: Record...")
+            log.info("Reading: Record...")
             health_data.records = list(map(
                 lambda r: Record(**r),
                 data.get("Record", [])
             ))
 
         if include_workouts:
-            print("Reading: Workout...")
+            log.info("Reading: Workout...")
             health_data.workouts = list(map(
                 lambda w: Workout(**w),
                 data.get("Workout", [])

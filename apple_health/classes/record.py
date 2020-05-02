@@ -1,104 +1,19 @@
 from apple_health.classes.base import Sample
-
+from apple_health.constants import RECORDS
 from apple_health.util import parse_float
+
+UNIT = "@unit"
+VALUE = "@value"
 
 
 class Record(Sample):
-    TYPES = {
-        "HKCategoryTypeIdentifierAppleStandHour": "Stand Hour",
-        "HKCategoryTypeIdentifierMindfulSession": "Mindful Session",
-        "HKCategoryTypeIdentifierSleepAnalysis": "Sleep Analysis",
-        "HKCategoryTypeIdentifierToothbrushingEvent": "Toothbrushing Event",
-        "HKQuantityTypeIdentifierActiveEnergyBurned": "Active Energy Burned",
-        "HKQuantityTypeIdentifierAppleExerciseTime": "Exercise Time",
-        "HKQuantityTypeIdentifierAppleStandTime": "Stand Time",
-        "HKQuantityTypeIdentifierBasalBodyTemperature": "Basal Body Temperature",
-        "HKQuantityTypeIdentifierBasalEnergyBurned": "Basal Energy Burned",
-        "HKQuantityTypeIdentifierBloodAlcoholContent": "Blood Alcohol Content",
-        "HKQuantityTypeIdentifierBloodGlucose": "Blood Glucose",
-        "HKQuantityTypeIdentifierBloodPressureDiastolic": "Blood Pressure Diastolic",
-        "HKQuantityTypeIdentifierBloodPressureSystolic": "Blood Pressure Systolic",
-        "HKQuantityTypeIdentifierBodyFatPercentage": "Body Fat Percentage",
-        "HKQuantityTypeIdentifierBodyMass": "Body Mass",
-        "HKQuantityTypeIdentifierBodyMassIndex": "Body Mass Index",
-        "HKQuantityTypeIdentifierBodyTemperature": "Body Temperature",
-        "HKQuantityTypeIdentifierDietaryBiotin": "Biotin",
-        "HKQuantityTypeIdentifierDietaryCaffeine": "Caffeine",
-        "HKQuantityTypeIdentifierDietaryCalcium": "Calcium",
-        "HKQuantityTypeIdentifierDietaryCarbohydrates": "Carbohydrates",
-        "HKQuantityTypeIdentifierDietaryChloride": "Chloride",
-        "HKQuantityTypeIdentifierDietaryCholesterol": "Cholesterol",
-        "HKQuantityTypeIdentifierDietaryChromium": "Chromium",
-        "HKQuantityTypeIdentifierDietaryCopper": "Copper",
-        "HKQuantityTypeIdentifierDietaryEnergyConsumed": "Energy Consumed",
-        "HKQuantityTypeIdentifierDietaryFatMonounsaturated": "Fat Monounsaturated",
-        "HKQuantityTypeIdentifierDietaryFatPolyunsaturated": "Fat Polyunsaturated",
-        "HKQuantityTypeIdentifierDietaryFatSaturated": "Fat Saturated",
-        "HKQuantityTypeIdentifierDietaryFatTotal": "Fat Total",
-        "HKQuantityTypeIdentifierDietaryFiber": "Fiber",
-        "HKQuantityTypeIdentifierDietaryFolate": "Folate",
-        "HKQuantityTypeIdentifierDietaryIodine": "Iodine",
-        "HKQuantityTypeIdentifierDietaryIron": "Iron",
-        "HKQuantityTypeIdentifierDietaryMagnesium": "Magnesium",
-        "HKQuantityTypeIdentifierDietaryManganese": "Manganese",
-        "HKQuantityTypeIdentifierDietaryMolybdenum": "Molybdenum",
-        "HKQuantityTypeIdentifierDietaryNiacin": "Niacin",
-        "HKQuantityTypeIdentifierDietaryPantothenicAcid": "Pantothenic Acid",
-        "HKQuantityTypeIdentifierDietaryPhosphorus": "Phosphorus",
-        "HKQuantityTypeIdentifierDietaryPotassium": "Potassium",
-        "HKQuantityTypeIdentifierDietaryProtein": "Protein",
-        "HKQuantityTypeIdentifierDietaryRiboflavin": "Riboflavin",
-        "HKQuantityTypeIdentifierDietarySelenium": "Selenium",
-        "HKQuantityTypeIdentifierDietarySodium": "Sodium",
-        "HKQuantityTypeIdentifierDietarySugar": "Sugar",
-        "HKQuantityTypeIdentifierDietaryThiamin": "Thiamin",
-        "HKQuantityTypeIdentifierDietaryVitaminA": "Vitamin A",
-        "HKQuantityTypeIdentifierDietaryVitaminB12": "Vitamin B12",
-        "HKQuantityTypeIdentifierDietaryVitaminB6": "Vitamin B6",
-        "HKQuantityTypeIdentifierDietaryVitaminC": "Vitamin C",
-        "HKQuantityTypeIdentifierDietaryVitaminD": "Vitamin D",
-        "HKQuantityTypeIdentifierDietaryVitaminE": "Vitamin E",
-        "HKQuantityTypeIdentifierDietaryVitaminK": "Vitamin K",
-        "HKQuantityTypeIdentifierDietaryWater": "Water",
-        "HKQuantityTypeIdentifierDietaryZinc": "Zinc",
-        "HKQuantityTypeIdentifierDistanceCycling": "Distance Cycling",
-        "HKQuantityTypeIdentifierDistanceDownhillSnowSports": "Distance Downhill Snow Sports",
-        "HKQuantityTypeIdentifierDistanceSwimming": "Distance Swimming",
-        "HKQuantityTypeIdentifierDistanceWalkingRunning": "Distance Walking/Running",
-        "HKQuantityTypeIdentifierDistanceWheelchair": "Distance Wheelchair",
-        "HKQuantityTypeIdentifierElectrodermalActivity": "Electrodermal Activity",
-        "HKQuantityTypeIdentifierEnvironmentalAudioExposure": "Environmental Audio Exposure",
-        "HKQuantityTypeIdentifierFlightsClimbed": "Flights Climbed",
-        "HKQuantityTypeIdentifierForcedExpiratoryVolume1": "Forced Expiratory Volume1",
-        "HKQuantityTypeIdentifierForcedVitalCapacity": "Forced Vital Capacity",
-        "HKQuantityTypeIdentifierHeadphoneAudioExposure": "Headphone Audio Exposure",
-        "HKQuantityTypeIdentifierHeartRate": "Heart Rate",
-        "HKQuantityTypeIdentifierHeartRateVariabilitySDNN": "Heart Rate Variability",
-        "HKQuantityTypeIdentifierHeight": "Height",
-        "HKQuantityTypeIdentifierInhalerUsage": "Inhaler Usage",
-        "HKQuantityTypeIdentifierInsulinDelivery": "Insulin Delivery",
-        "HKQuantityTypeIdentifierLeanBodyMass": "Lean Body Mass",
-        "HKQuantityTypeIdentifierNikeFuel": "Nike Fuel",
-        "HKQuantityTypeIdentifierNumberOfTimesFallen": "Number Of Times Fallen",
-        "HKQuantityTypeIdentifierOxygenSaturation": "Oxygen Saturation",
-        "HKQuantityTypeIdentifierPeakExpiratoryFlowRate": "Peak Expiratory Flow Rate",
-        "HKQuantityTypeIdentifierPeripheralPerfusionIndex": "Peripheral Perfusion Index",
-        "HKQuantityTypeIdentifierPushCount": "Push Count",
-        "HKQuantityTypeIdentifierRespiratoryRate": "Respiratory Rate",
-        "HKQuantityTypeIdentifierRestingHeartRate": "Resting Heart Rate",
-        "HKQuantityTypeIdentifierStepCount": "Step Count",
-        "HKQuantityTypeIdentifierSwimmingStrokeCount": "Swimming Stroke Count",
-        "HKQuantityTypeIdentifierUVExposure": "U V Exposure",
-        "HKQuantityTypeIdentifierVO2Max": "V O2 Max",
-        "HKQuantityTypeIdentifierWaistCircumference": "Waist Circumference",
-        "HKQuantityTypeIdentifierWalkingHeartRateAverage": "Walking Heart Rate Average",
-    }
+    TYPES = RECORDS
 
     def __init__(self, **data):
         super().__init__(**data)
 
-        self.unit: str = data.get("@unit")
-        self.value: float = parse_float(data.get("@value"))
+        self.unit: str = data.get(UNIT)
+        self.value: float = parse_float(data.get(VALUE))
 
     def __repr__(self):
-        return f"{self.alias}: {self.value} {self.created_at}"
+        return f"{self.name}: {self.value} {self.unit} {self.created_at}"
