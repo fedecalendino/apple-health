@@ -9,7 +9,7 @@ with open(path.join(this_directory, "readme.md"), encoding="utf-8") as f:
 
 setup(
     name="apple-health",
-    version="0.5",
+    version="1.0",
     url="https://github.com/fedecalendino/apple-health",
     license="MIT",
     description="Library to extract information from Apple Health exports",
@@ -22,7 +22,11 @@ setup(
         "apple_health.classes",
         "apple_health.constants",
     ],
-    keywords=[],
+    keywords=["apple health"],
+    install_requires=[
+        "python-dateutil",
+        "xmltodict",
+    ],
     classifiers=[
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
