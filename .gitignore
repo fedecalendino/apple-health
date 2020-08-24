@@ -20,5 +20,7 @@ build
 venv/
 
 # Testing
+coverage.xml
 .coverage
 coverage
+.scannerwork/
