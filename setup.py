@@ -9,14 +9,14 @@ with open(path.join(this_directory, "readme.md"), encoding="utf-8") as f:
 
 setup(
     name="apple-health",
-    version="0.3",
+    version="0.4",
     url="https://github.com/fedecalendino/apple-health",
     license="MIT",
     description="",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Federico Calendino",
-    author_email="federico@calendino.com",
+    author="Fede Calendino",
+    author_email="fede@calendino.com",
     packages=[
         "apple_health",
     ],
