@@ -9,16 +9,18 @@ with open(path.join(this_directory, "readme.md"), encoding="utf-8") as f:
 
 setup(
     name="apple-health",
-    version="0.4",
+    version="0.5",
     url="https://github.com/fedecalendino/apple-health",
     license="MIT",
-    description="",
+    description="Library to extract information from Apple Health exports",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Fede Calendino",
     author_email="fede@calendino.com",
     packages=[
         "apple_health",
+        "apple_health.classes",
+        "apple_health.constants",
     ],
     keywords=[],
     classifiers=[
