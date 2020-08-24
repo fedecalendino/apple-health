@@ -37,6 +37,7 @@ jobs:
         provider: pypi
         user: "__token__"
         # password: see secret PYPI_PASSWORD variable
+        skip_cleanup: true
         distributions: sdist bdist_wheel
         on:
           tags: true
