@@ -2,7 +2,6 @@ from typing import List
 
 from apple_health.classes.base import Sample
 from apple_health.classes.record import Record
-from apple_health.constants import CORRELATIONS
 from apple_health.util import parse_float
 
 UNIT = "@unit"
@@ -10,8 +9,6 @@ VALUE = "@value"
 
 
 class Correlation(Sample):
-    TYPES = CORRELATIONS
-
     def __init__(self, **data):
         super().__init__(**data)
 

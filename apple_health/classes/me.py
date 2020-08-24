@@ -1,13 +1,6 @@
 from datetime import datetime
 from typing import Optional
 
-from apple_health.constants import (
-    BIOLOGICAL_SEXES,
-    BLOOD_TYPES,
-    SKIN_TYPES,
-    WHEELCHAIR_USES,
-)
-
 DATE_OF_BIRTH = "@HKCharacteristicTypeIdentifierDateOfBirth"
 BIOLOGICAL_SEX = "@HKCharacteristicTypeIdentifierBiologicalSex"
 BLOOD_TYPE = "@HKCharacteristicTypeIdentifierBloodType"
@@ -25,18 +18,10 @@ class Me:
         except (ValueError, TypeError):
             self.date_of_birth = None
 
-        self.biological_sex: str = BIOLOGICAL_SEXES.get(
-            data.get(BIOLOGICAL_SEX)
-        )
-        self.blood_type: str = BLOOD_TYPES.get(
-            data.get(BLOOD_TYPE)
-        )
-        self.skin_type: str = SKIN_TYPES.get(
-            data.get(SKIN_TYPE)
-        )
-        self.wheelchair_use: bool = WHEELCHAIR_USES.get(
-            data.get(WHEELCHAIR_USE)
-        )
+        self.biological_sex: str = data.get(BIOLOGICAL_SEX)
+        self.blood_type: str = data.get(BLOOD_TYPE)
+        self.skin_type: str = data.get(SKIN_TYPE)
+        self.wheelchair_use: bool = data.get(WHEELCHAIR_USE)
 
     @property
     def age(self) -> Optional[int]:

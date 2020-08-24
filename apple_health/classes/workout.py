@@ -1,5 +1,4 @@
 from apple_health.classes.base import Sample
-from apple_health.constants import WORKOUTS
 from apple_health.util import parse_float
 
 WORKOUT_ACTIVITY_TYPE = "@workoutActivityType"
@@ -15,7 +14,6 @@ TOTAL_SWIMMING_STROKE_COUNT = "@totalSwimmingStrokeCount"
 
 class Workout(Sample):
     NAME_KEY = WORKOUT_ACTIVITY_TYPE
-    TYPES = WORKOUTS
 
     def __init__(self, **data):
         super().__init__(**data)

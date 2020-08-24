@@ -1,5 +1,4 @@
 from apple_health.classes.base import Sample
-from apple_health.constants import RECORDS
 from apple_health.util import parse_float, parse_time
 from typing import List
 
@@ -19,22 +18,12 @@ class HeartRateVariability:
 
 
 class Record(Sample):
-    TYPES = RECORDS
-
     def __init__(self, **data):
         super().__init__(**data)
 
         self.unit: str = data.get(UNIT)
         self.value: float = parse_float(data.get(VALUE))
         self.heart_rate: List[HeartRateVariability] = []
-
-        hrvml = data.get("HeartRateVariabilityMetadataList")
-
-        if hrvml:
-            self.heart_rate = list(map(
-                lambda ibpm: HeartRateVariability(**ibpm),
-                hrvml.get("InstantaneousBeatsPerMinute", [])
-            ))
 
     def __repr__(self):
         return f"{self.name}: {self.value:0.2f} {self.unit} {self.created_at}"
