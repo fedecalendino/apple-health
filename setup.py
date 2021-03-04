@@ -9,7 +9,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="apple-health",
-    version="1.1",
+    version="1.1.1",
     url="https://github.com/fedecalendino/apple-health",
     license="MIT",
     description="Library to extract information from Apple Health exports",
