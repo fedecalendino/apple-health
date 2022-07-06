@@ -7,20 +7,20 @@
 ---
 
 ```python
-from apple_health import HealthData
+from health import HealthData
 
 FILE = "./export/export.xml"
-health_data = HealthData.read(FILE)
+data = HealthData.read(FILE)
 
-print(f"{len(health_data.activity_summaries)} activity records")
-print(f"{len(health_data.correlations)} correlations")
-print(f"{len(health_data.records)} records")
-print(f"{len(health_data.workouts)} workouts")
+print(f"{len(data.activity_summaries)} activity records")
+print(f"{len(data.correlations)} correlations")
+print(f"{len(data.records)} records")
+print(f"{len(data.workouts)} workouts")
 ```
 
 ```text
->> 25 activity records
->> 37 correlations
->> 47013 records
->> 17 workouts
+>> 322 activity records
+>> 0 correlations
+>> 650919 records
+>> 129 workouts
 ```

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from apple_health.util import parse_date
+from health.util import parse_date
 
 
 TYPE = "@type"

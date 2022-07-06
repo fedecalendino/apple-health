@@ -1,5 +1,5 @@
-from apple_health.classes.base import Sample
-from apple_health.util import parse_float
+from health.classes.base import Sample
+from health.util import parse_float
 
 WORKOUT_ACTIVITY_TYPE = "@workoutActivityType"
 DURATION = "@duration"

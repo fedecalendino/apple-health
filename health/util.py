@@ -3,7 +3,7 @@ from typing import Optional
 
 from dateutil import parser
 
-from apple_health.constants import record
+from health.constants import record
 
 CONSTANTS = {
     record.HK_RECORD_NOT_APPLICABLE: 0,

@@ -2,7 +2,7 @@ import logging
 
 import xmltodict
 
-from apple_health.classes import (
+from health.classes import (
     Me,
     ActivitySummary,
     Correlation,

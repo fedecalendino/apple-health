@@ -5,7 +5,7 @@ documentation = "https://github.com/fedecalendino/apple-health/blob/main/README.
 homepage = "https://github.com/fedecalendino/apple-health"
 license = "MIT"
 readme = "README.md"
-version = "1.2.0"
+version = "2.0.0"
 
 authors = [
   "Fede Calendino <fede@calendino.com>",
@@ -22,7 +22,7 @@ keywords = [
   "apple health",
 ]
 packages = [
-  { include = "apple_health" },
+  { include = "health" },
 ]
 
 [tool.poetry.dependencies]

@@ -1,4 +1,4 @@
-from apple_health.util import parse_date, parse_float
+from health.util import parse_date, parse_float
 
 DATE_COMPONENTS = "@dateComponents"
 ACTIVE_ENERGY_BURNED = "@activeEnergyBurned"

@@ -1,5 +1,5 @@
-from apple_health.classes.base import Sample
-from apple_health.util import parse_float, parse_time
+from health.classes.base import Sample
+from health.util import parse_float, parse_time
 from typing import List
 
 UNIT = "@unit"

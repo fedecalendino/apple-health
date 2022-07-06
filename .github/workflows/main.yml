@@ -31,7 +31,7 @@ jobs:
 
       - name: Run tests with Coverage
         run: |
-          poetry run coverage run --source apple_health -m unittest discover
+          poetry run coverage run --source health -m unittest discover
           poetry run coverage xml -o ./coverage.xml
 
       - name: Fix coverage xml path
