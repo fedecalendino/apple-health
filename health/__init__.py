@@ -1,1 +1,1 @@
-from health.health_data import HealthData
+from health.data import HealthData
