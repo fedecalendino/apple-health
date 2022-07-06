@@ -27,9 +27,7 @@ class Workout(Sample):
         self.energy_burned: float = parse_float(data.get(TOTAL_ENERGY_BURNED))
         self.energy_burned_unit: str = data.get(TOTAL_ENERGY_BURNED_UNIT)
 
-        self.flights_climbed: float = parse_float(
-            data.get(TOTAL_FLIGHTS_CLIMBED)
-        )
+        self.flights_climbed: float = parse_float(data.get(TOTAL_FLIGHTS_CLIMBED))
         self.swimming_strokes: float = parse_float(
             data.get(TOTAL_SWIMMING_STROKE_COUNT)
         )

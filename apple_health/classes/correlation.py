@@ -15,10 +15,9 @@ class Correlation(Sample):
         self.unit: str = data.get(UNIT)
         self.value: float = parse_float(data.get(VALUE))
 
-        self.records: List[Record] = list(map(
-            lambda record_data: Record(**record_data),
-            data.get("Record", [])
-        ))
+        self.records: List[Record] = list(
+            map(lambda record_data: Record(**record_data), data.get("Record", []))
+        )
 
     def __repr__(self) -> str:
         return f"{self.name}: {len(self.records)} records"

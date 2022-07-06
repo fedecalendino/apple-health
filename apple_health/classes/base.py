@@ -41,10 +41,7 @@ class Sample:
         elif isinstance(metadata, dict):
             self.metadata = [MetaData(**metadata)]
         elif isinstance(metadata, list):
-            self.metadata = list(map(
-                lambda m: MetaData(**m),
-                metadata
-            ))
+            self.metadata = list(map(lambda m: MetaData(**m), metadata))
 
     @property
     def seconds(self) -> int:

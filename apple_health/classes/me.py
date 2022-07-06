@@ -12,8 +12,7 @@ class Me:
     def __init__(self, **data):
         try:
             self.date_of_birth: datetime = datetime.strptime(
-                data.get(DATE_OF_BIRTH),
-                "%Y-%m-%d"
+                data.get(DATE_OF_BIRTH), "%Y-%m-%d"
             )
         except (ValueError, TypeError):
             self.date_of_birth = None

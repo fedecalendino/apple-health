@@ -4,7 +4,9 @@ HK_RECORD_APPLE_STAND_HOUR = "HKCategoryTypeIdentifierAppleStandHour"
 HK_RECORD_APPLE_STAND_HOUR_IDLE = "HKCategoryValueAppleStandHourIdle"
 HK_RECORD_APPLE_STAND_HOUR_STOOD = "HKCategoryValueAppleStandHourStood"
 HK_RECORD_APPLE_STAND_TIME = "HKQuantityTypeIdentifierAppleStandTime"
-HK_RECORD_AUDIO_EXPOSURE_EVENT_LOUD_ENVIRONMENT = "HKCategoryValueAudioExposureEventLoudEnvironment"
+HK_RECORD_AUDIO_EXPOSURE_EVENT_LOUD_ENVIRONMENT = (
+    "HKCategoryValueAudioExposureEventLoudEnvironment"
+)
 HK_RECORD_BASAL_BODY_TEMPERATURE = "HKQuantityTypeIdentifierBasalBodyTemperature"
 HK_RECORD_BASAL_ENERGY_BURNED = "HKQuantityTypeIdentifierBasalEnergyBurned"
 HK_RECORD_BLOOD_ALCOHOL_CONTENT = "HKQuantityTypeIdentifierBloodAlcoholContent"
@@ -17,7 +19,9 @@ HK_RECORD_BODY_MASS_INDEX = "HKQuantityTypeIdentifierBodyMassIndex"
 HK_RECORD_BODY_TEMPERATURE = "HKQuantityTypeIdentifierBodyTemperature"
 HK_RECORD_CERVICAL_MUCUS_QUALITY_CREAMY = "HKCategoryValueCervicalMucusQualityCreamy"
 HK_RECORD_CERVICAL_MUCUS_QUALITY_DRY = "HKCategoryValueCervicalMucusQualityDry"
-HK_RECORD_CERVICAL_MUCUS_QUALITY_EGG_WHITE = "HKCategoryValueCervicalMucusQualityEggWhite"
+HK_RECORD_CERVICAL_MUCUS_QUALITY_EGG_WHITE = (
+    "HKCategoryValueCervicalMucusQualityEggWhite"
+)
 HK_RECORD_CERVICAL_MUCUS_QUALITY_STICKY = "HKCategoryValueCervicalMucusQualitySticky"
 HK_RECORD_CERVICAL_MUCUS_QUALITY_WATERY = "HKCategoryValueCervicalMucusQualityWatery"
 HK_RECORD_DIETARY_BIOTIN = "HKQuantityTypeIdentifierDietaryBiotin"
@@ -29,8 +33,12 @@ HK_RECORD_DIETARY_CHOLESTEROL = "HKQuantityTypeIdentifierDietaryCholesterol"
 HK_RECORD_DIETARY_CHROMIUM = "HKQuantityTypeIdentifierDietaryChromium"
 HK_RECORD_DIETARY_COPPER = "HKQuantityTypeIdentifierDietaryCopper"
 HK_RECORD_DIETARY_ENERGY_CONSUMED = "HKQuantityTypeIdentifierDietaryEnergyConsumed"
-HK_RECORD_DIETARY_FAT_MONOUNSATURATED = "HKQuantityTypeIdentifierDietaryFatMonounsaturated"
-HK_RECORD_DIETARY_FAT_POLYUNSATURATED = "HKQuantityTypeIdentifierDietaryFatPolyunsaturated"
+HK_RECORD_DIETARY_FAT_MONOUNSATURATED = (
+    "HKQuantityTypeIdentifierDietaryFatMonounsaturated"
+)
+HK_RECORD_DIETARY_FAT_POLYUNSATURATED = (
+    "HKQuantityTypeIdentifierDietaryFatPolyunsaturated"
+)
 HK_RECORD_DIETARY_FAT_SATURATED = "HKQuantityTypeIdentifierDietaryFatSaturated"
 HK_RECORD_DIETARY_FAT_TOTAL = "HKQuantityTypeIdentifierDietaryFatTotal"
 HK_RECORD_DIETARY_FIBER = "HKQuantityTypeIdentifierDietaryFiber"
@@ -60,18 +68,24 @@ HK_RECORD_DIETARY_VITAMIN_K = "HKQuantityTypeIdentifierDietaryVitaminK"
 HK_RECORD_DIETARY_WATER = "HKQuantityTypeIdentifierDietaryWater"
 HK_RECORD_DIETARY_ZINC = "HKQuantityTypeIdentifierDietaryZinc"
 HK_RECORD_DISTANCE_CYCLING = "HKQuantityTypeIdentifierDistanceCycling"
-HK_RECORD_DISTANCE_DOWNHILL_SNOW_SPORTS = "HKQuantityTypeIdentifierDistanceDownhillSnowSports"
+HK_RECORD_DISTANCE_DOWNHILL_SNOW_SPORTS = (
+    "HKQuantityTypeIdentifierDistanceDownhillSnowSports"
+)
 HK_RECORD_DISTANCE_SWIMMING = "HKQuantityTypeIdentifierDistanceSwimming"
 HK_RECORD_DISTANCE_WALKING_RUNNING = "HKQuantityTypeIdentifierDistanceWalkingRunning"
 HK_RECORD_DISTANCE_WHEELCHAIR = "HKQuantityTypeIdentifierDistanceWheelchair"
 HK_RECORD_ELECTRODERMAL_ACTIVITY = "HKQuantityTypeIdentifierElectrodermalActivity"
-HK_RECORD_ENVIRONMENTAL_AUDIO_EXPOSURE = "HKQuantityTypeIdentifierEnvironmentalAudioExposure"
+HK_RECORD_ENVIRONMENTAL_AUDIO_EXPOSURE = (
+    "HKQuantityTypeIdentifierEnvironmentalAudioExposure"
+)
 HK_RECORD_FLIGHTS_CLIMBED = "HKQuantityTypeIdentifierFlightsClimbed"
 HK_RECORD_FORCED_EXPIRATORY_VOLUME1 = "HKQuantityTypeIdentifierForcedExpiratoryVolume1"
 HK_RECORD_FORCED_VITAL_CAPACITY = "HKQuantityTypeIdentifierForcedVitalCapacity"
 HK_RECORD_HEADPHONE_AUDIO_EXPOSURE = "HKQuantityTypeIdentifierHeadphoneAudioExposure"
 HK_RECORD_HEART_RATE = "HKQuantityTypeIdentifierHeartRate"
-HK_RECORD_HEART_RATE_VARIABILITY_S_D_N_N = "HKQuantityTypeIdentifierHeartRateVariabilitySDNN"
+HK_RECORD_HEART_RATE_VARIABILITY_S_D_N_N = (
+    "HKQuantityTypeIdentifierHeartRateVariabilitySDNN"
+)
 HK_RECORD_HEIGHT = "HKQuantityTypeIdentifierHeight"
 HK_RECORD_INHALER_USAGE = "HKQuantityTypeIdentifierInhalerUsage"
 HK_RECORD_INSULIN_DELIVERY = "HKQuantityTypeIdentifierInsulinDelivery"
@@ -80,13 +94,21 @@ HK_RECORD_MINDFUL_SESSION = "HKCategoryTypeIdentifierMindfulSession"
 HK_RECORD_NIKE_FUEL = "HKQuantityTypeIdentifierNikeFuel"
 HK_RECORD_NOT_APPLICABLE = "HKCategoryValueNotApplicable"
 HK_RECORD_NUMBER_OF_TIMES_FALLEN = "HKQuantityTypeIdentifierNumberOfTimesFallen"
-HK_RECORD_OVULATION_TEST_RESULT_ESTROGEN_SURGE = "HKCategoryValueOvulationTestResultEstrogenSurge"
-HK_RECORD_OVULATION_TEST_RESULT_INDETERMINATE = "HKCategoryValueOvulationTestResultIndeterminate"
-HK_RECORD_OVULATION_TEST_RESULT_LUTEINIZING_HORMONE_SURGE = "HKCategoryValueOvulationTestResultLuteinizingHormoneSurge"
+HK_RECORD_OVULATION_TEST_RESULT_ESTROGEN_SURGE = (
+    "HKCategoryValueOvulationTestResultEstrogenSurge"
+)
+HK_RECORD_OVULATION_TEST_RESULT_INDETERMINATE = (
+    "HKCategoryValueOvulationTestResultIndeterminate"
+)
+HK_RECORD_OVULATION_TEST_RESULT_LUTEINIZING_HORMONE_SURGE = (
+    "HKCategoryValueOvulationTestResultLuteinizingHormoneSurge"
+)
 HK_RECORD_OVULATION_TEST_RESULT_NEGATIVE = "HKCategoryValueOvulationTestResultNegative"
 HK_RECORD_OXYGEN_SATURATION = "HKQuantityTypeIdentifierOxygenSaturation"
 HK_RECORD_PEAK_EXPIRATORY_FLOW_RATE = "HKQuantityTypeIdentifierPeakExpiratoryFlowRate"
-HK_RECORD_PERIPHERAL_PERFUSION_INDEX = "HKQuantityTypeIdentifierPeripheralPerfusionIndex"
+HK_RECORD_PERIPHERAL_PERFUSION_INDEX = (
+    "HKQuantityTypeIdentifierPeripheralPerfusionIndex"
+)
 HK_RECORD_PUSH_COUNT = "HKQuantityTypeIdentifierPushCount"
 HK_RECORD_RESPIRATORY_RATE = "HKQuantityTypeIdentifierRespiratoryRate"
 HK_RECORD_RESTING_HEART_RATE = "HKQuantityTypeIdentifierRestingHeartRate"
@@ -101,8 +123,14 @@ HK_RECORD_U_V_EXPOSURE = "HKQuantityTypeIdentifierUVExposure"
 HK_RECORD_V_O2_MAX = "HKQuantityTypeIdentifierVO2Max"
 HK_RECORD_WAIST_CIRCUMFERENCE = "HKQuantityTypeIdentifierWaistCircumference"
 HK_RECORD_WALKING_HEART_RATE_AVERAGE = "HKQuantityTypeIdentifierWalkingHeartRateAverage"
-HK_RECORD_WALKING_DOUBLE_SUPPORT_PERCENTAGE = "HKQuantityTypeIdentifierWalkingDoubleSupportPercentage"
-HK_RECORD_SIX_MINUTE_WALK_TEST_DISTANCE = "HKQuantityTypeIdentifierSixMinuteWalkTestDistance"
+HK_RECORD_WALKING_DOUBLE_SUPPORT_PERCENTAGE = (
+    "HKQuantityTypeIdentifierWalkingDoubleSupportPercentage"
+)
+HK_RECORD_SIX_MINUTE_WALK_TEST_DISTANCE = (
+    "HKQuantityTypeIdentifierSixMinuteWalkTestDistance"
+)
 HK_RECORD_WALKING_SPEED = "HKQuantityTypeIdentifierWalkingSpeed"
 HK_RECORD_WALKING_STEP_LENGTH = "HKQuantityTypeIdentifierWalkingStepLength"
-HK_RECORD_WALKING_ASYMMETRY_PERCENTAGE = "HKQuantityTypeIdentifierWalkingAsymmetryPercentage"
+HK_RECORD_WALKING_ASYMMETRY_PERCENTAGE = (
+    "HKQuantityTypeIdentifierWalkingAsymmetryPercentage"
+)

@@ -17,9 +17,7 @@ class ActivitySummary:
         self.date = parse_date(data.get(DATE_COMPONENTS))
 
         # Red
-        self.active_energy_burned: float = parse_float(
-            data.get(ACTIVE_ENERGY_BURNED)
-        )
+        self.active_energy_burned: float = parse_float(data.get(ACTIVE_ENERGY_BURNED))
         self.active_energy_burned_goal: float = parse_float(
             data.get(ACTIVE_ENERGY_BURNED_GOAL)
         )
@@ -28,20 +26,12 @@ class ActivitySummary:
         )
 
         # Green
-        self.exercise_time: float = parse_float(
-            data.get(APPLE_EXERCISE_TIME)
-        )
-        self.exercise_time_goal: float = parse_float(
-            data.get(APPLE_EXERCISE_TIME_GOAL)
-        )
+        self.exercise_time: float = parse_float(data.get(APPLE_EXERCISE_TIME))
+        self.exercise_time_goal: float = parse_float(data.get(APPLE_EXERCISE_TIME_GOAL))
 
         # Blue
-        self.stand_hours: float = parse_float(
-            data.get(APPLE_STAND_HOURS)
-        )
-        self.stand_hours_goal: float = parse_float(
-            data.get(APPLE_STAND_HOURS_GOAL)
-        )
+        self.stand_hours: float = parse_float(data.get(APPLE_STAND_HOURS))
+        self.stand_hours_goal: float = parse_float(data.get(APPLE_STAND_HOURS_GOAL))
 
     @property
     def active_energy_percent(self) -> float:

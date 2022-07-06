@@ -50,6 +50,3 @@ def parse_float(value: str, default: float = 0.0) -> float:
         return float(value)
     except (ValueError, TypeError):
         return default
-
-
-

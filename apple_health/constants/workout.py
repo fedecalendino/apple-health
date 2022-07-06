@@ -17,18 +17,24 @@ HK_WORKOUT_ELLIPTICAL = "HKWorkoutActivityTypeElliptical"
 HK_WORKOUT_EQUESTRIAN_SPORTS = "HKWorkoutActivityTypeEquestrianSports"
 HK_WORKOUT_FENCING = "HKWorkoutActivityTypeFencing"
 HK_WORKOUT_FISHING = "HKWorkoutActivityTypeFishing"
-HK_WORKOUT_FUNCTIONAL_STRENGTH_TRAINING = "HKWorkoutActivityTypeFunctionalStrengthTraining"
+HK_WORKOUT_FUNCTIONAL_STRENGTH_TRAINING = (
+    "HKWorkoutActivityTypeFunctionalStrengthTraining"
+)
 HK_WORKOUT_GOLF = "HKWorkoutActivityTypeGolf"
 HK_WORKOUT_GYMNASTICS = "HKWorkoutActivityTypeGymnastics"
 HK_WORKOUT_HANDBALL = "HKWorkoutActivityTypeHandball"
-HK_WORKOUT_HIGH_INTENSITY_INTERVAL_TRAINING = "HKWorkoutActivityTypeHighIntensityIntervalTraining"
+HK_WORKOUT_HIGH_INTENSITY_INTERVAL_TRAINING = (
+    "HKWorkoutActivityTypeHighIntensityIntervalTraining"
+)
 HK_WORKOUT_HIKING = "HKWorkoutActivityTypeHiking"
 HK_WORKOUT_HOCKEY = "HKWorkoutActivityTypeHockey"
 HK_WORKOUT_HUNTING = "HKWorkoutActivityTypeHunting"
 HK_WORKOUT_LACROSSE = "HKWorkoutActivityTypeLacrosse"
 HK_WORKOUT_MARTIAL_ARTS = "HKWorkoutActivityTypeMartialArts"
 HK_WORKOUT_MIND_AND_BODY = "HKWorkoutActivityTypeMindAndBody"
-HK_WORKOUT_MIXED_METABOLIC_CARDIO_TRAINING = "HKWorkoutActivityTypeMixedMetabolicCardioTraining"
+HK_WORKOUT_MIXED_METABOLIC_CARDIO_TRAINING = (
+    "HKWorkoutActivityTypeMixedMetabolicCardioTraining"
+)
 HK_WORKOUT_OTHER = "HKWorkoutActivityTypeOther"
 HK_WORKOUT_PADDLE_SPORTS = "HKWorkoutActivityTypePaddleSports"
 HK_WORKOUT_PLAY = "HKWorkoutActivityTypePlay"
@@ -49,7 +55,9 @@ HK_WORKOUT_SWIMMING = "HKWorkoutActivityTypeSwimming"
 HK_WORKOUT_TABLE_TENNIS = "HKWorkoutActivityTypeTableTennis"
 HK_WORKOUT_TENNIS = "HKWorkoutActivityTypeTennis"
 HK_WORKOUT_TRACK_AND_FIELD = "HKWorkoutActivityTypeTrackAndField"
-HK_WORKOUT_TRADITIONAL_STRENGTH_TRAINING = "HKWorkoutActivityTypeTraditionalStrengthTraining"
+HK_WORKOUT_TRADITIONAL_STRENGTH_TRAINING = (
+    "HKWorkoutActivityTypeTraditionalStrengthTraining"
+)
 HK_WORKOUT_VOLLEYBALL = "HKWorkoutActivityTypeVolleyball"
 HK_WORKOUT_WALKING = "HKWorkoutActivityTypeWalking"
 HK_WORKOUT_WATER_FITNESS = "HKWorkoutActivityTypeWaterFitness"

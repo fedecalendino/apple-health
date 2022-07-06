@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "apple-health"
+description = "Library to extract information from Apple Health exports."
+documentation = "https://github.com/fedecalendino/apple-health/blob/main/README.md"
+homepage = "https://github.com/fedecalendino/apple-health"
+license = "MIT"
+readme = "README.md"
+version = "1.2.0"
+
+authors = [
+  "Fede Calendino <fede@calendino.com>",
+]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+keywords = [
+  "parser",
+  "apple health",
+]
+packages = [
+  { include = "apple_health" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dateutil = "^2.8.2"
+xmltodict = "^0.13.0"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.4.1"
+black = "^22.6.0"
+ddt = "^1.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
